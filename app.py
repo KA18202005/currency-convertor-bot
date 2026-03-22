@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 import freecurrencyapi
 
-client = freecurrencyapi.Client('fca_live_pNMM3Xth7ecjljuqJJrVPwP4fxAM9TehW89jcj6g')
+import os
+client = freecurrencyapi.Client(os.getenv("API_KEY"))
 
 app = Flask(__name__)
 
